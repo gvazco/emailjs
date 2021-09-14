@@ -39,6 +39,13 @@ function App() {
   return (
     <>
       <div className="App">
+        {showMessage ? (
+          <div className="alert alert-success col-md-5 mx-auto" role="alert">
+            Email Send Success!!
+          </div>
+        ) : (
+          ``
+        )}
         <form>
           <div className="pt-3">
             <h3 className="font-weight-bold"> Contact Us !! </h3>
@@ -89,7 +96,9 @@ function App() {
             </div>
           </div>
           <div className="pt-3 col-md-5 mx-auto text-left">
-            <button className="btn btn-primary">Submit</button>
+            <button className="btn btn-primary" onSubmit={handleSubmit}>
+              Submit
+            </button>
           </div>
         </form>
       </div>
